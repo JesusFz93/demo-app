@@ -9,6 +9,8 @@ import {
 
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
+import ContactPage from "../pages/ContactPage";
+import HelpPage from "../pages/HelpPage";
 
 const AppRouter = () => {
   return (
@@ -30,10 +32,28 @@ const AppRouter = () => {
             About Page
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "activo" : undefined)}
+          >
+            Contact Page
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/help"
+            className={({ isActive }) => (isActive ? "activo" : undefined)}
+          >
+            Help Page
+          </NavLink>
+        </li>
       </ul>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/help" element={<HelpPage />} />
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
