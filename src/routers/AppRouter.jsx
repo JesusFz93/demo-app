@@ -12,6 +12,7 @@ import ContactPage from "../pages/ContactPage";
 import HelpPage from "../pages/HelpPage";
 import NavBar from "../components/NavBar";
 import BlogPage from "../pages/BlogPage";
+import UcamperPage from "../pages/UcamperPage";
 
 const AppRouter = () => {
   return (
@@ -22,6 +23,7 @@ const AppRouter = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/help" element={<HelpPage />} />
+        <Route path="/ucamper/:id/:nombre" element={<UcamperPage />} />
 
         <Route
           path="/blog"

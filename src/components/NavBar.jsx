@@ -44,6 +44,14 @@ const NavBar = () => {
           Blog Page
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/ucamper/35/jesus"
+          className={({ isActive }) => (isActive ? "activo" : undefined)}
+        >
+          Ucamper Page
+        </NavLink>
+      </li>
     </ul>
   );
 };
