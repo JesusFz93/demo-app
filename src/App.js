@@ -4,7 +4,11 @@ import AppRouter from "./routers/AppRouter";
 import "./styles/estilos.css";
 
 const App = () => {
-  return <AppRouter />;
-};
+  return (
+    <>
+      <AppRouter />
+    </>
+  )
+}
 
 export default App;

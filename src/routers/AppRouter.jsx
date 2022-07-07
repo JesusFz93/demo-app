@@ -15,6 +15,8 @@ import BlogPage from "../pages/BlogPage";
 import UcamperPage from "../pages/UcamperPage";
 import AlumnoPage from "../pages/AlumnoPage";
 import AlumnosPage from "../pages/AlumnosPage";
+import EstadosPage from "../pages/EstadosPage";
+import EfectosPage from "../pages/EfectosPage";
 
 const AppRouter = () => {
   return (
@@ -39,6 +41,9 @@ const AppRouter = () => {
             />
           }
         />
+
+        <Route path="/estados" element={<EstadosPage />} />
+        <Route path="/efectos" element={<EfectosPage />} />
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

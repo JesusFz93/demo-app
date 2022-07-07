@@ -60,6 +60,22 @@ const NavBar = () => {
           Alumnos Page
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/estados"
+          className={({ isActive }) => (isActive ? "activo" : undefined)}
+        >
+          Estados Page
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/efectos"
+          className={({ isActive }) => (isActive ? "activo" : undefined)}
+        >
+          Efectos Page
+        </NavLink>
+      </li>
     </ul>
   );
 };
