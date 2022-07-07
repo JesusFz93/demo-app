@@ -36,6 +36,14 @@ const NavBar = () => {
           Help Page
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/blog"
+          className={({ isActive }) => (isActive ? "activo" : undefined)}
+        >
+          Blog Page
+        </NavLink>
+      </li>
     </ul>
   );
 };
