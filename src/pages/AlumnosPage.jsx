@@ -29,7 +29,7 @@ const AlumnosPage = () => {
         </thead>
         <tbody>
           {alumnos.map((alumno) => (
-            <tr>
+            <tr key={alumno.id}>
               <th scope="row">{alumno.id}</th>
               <td>{alumno.nombre}</td>
               <td>

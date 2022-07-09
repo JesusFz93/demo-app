@@ -1,12 +1,15 @@
 import React from "react";
-import AppRouter from "./routers/AppRouter";
+import { AuthProvider } from "./auth/AuthContext";
+import AppRouterAuth from "./routers/AppRouterAuth";
 
 import "./styles/estilos.css";
 
 const App = () => {
   return (
     <>
-      <AppRouter />
+      <AuthProvider>
+        <AppRouterAuth />
+      </AuthProvider>
     </>
   );
 };
