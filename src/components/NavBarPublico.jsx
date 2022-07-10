@@ -44,6 +44,14 @@ const NavBarPublico = () => {
           Login
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/posts"
+          className={({ isActive }) => (isActive ? "activo" : undefined)}
+        >
+          Posts Page
+        </NavLink>
+      </li>
     </ul>
   );
 };
