@@ -15,12 +15,13 @@ import BlogPage from "../pages/BlogPage";
 import UcamperPage from "../pages/UcamperPage";
 import AlumnoPage from "../pages/AlumnoPage";
 import AlumnosPage from "../pages/AlumnosPage";
+import EstadosPage from "../pages/EstadosPage";
 
 const AppRouter = () => {
   return (
     <Router>
       <NavBar />
-      <div className="container">
+      <div className="container mt-5">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -40,6 +41,9 @@ const AppRouter = () => {
               />
             }
           />
+
+          <Route path="/estados" element={<EstadosPage />} />
+
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>

@@ -92,6 +92,17 @@ const NavBar = () => {
                 Ucamper Page
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                to="/estados"
+                aria-current="page"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Estados
+              </NavLink>
+            </li>
 
             <li className="nav-item">
               <NavLink
