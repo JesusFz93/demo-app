@@ -16,6 +16,7 @@ import UcamperPage from "../pages/UcamperPage";
 import AlumnoPage from "../pages/AlumnoPage";
 import AlumnosPage from "../pages/AlumnosPage";
 import EstadosPage from "../pages/EstadosPage";
+import PostsPage from "../pages/PostsPage";
 
 const AppRouter = () => {
   return (
@@ -43,6 +44,7 @@ const AppRouter = () => {
           />
 
           <Route path="/estados" element={<EstadosPage />} />
+          <Route path="/posts" element={<PostsPage />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
