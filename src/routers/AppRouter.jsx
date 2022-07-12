@@ -20,28 +20,29 @@ const AppRouter = () => {
   return (
     <Router>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/help" element={<HelpPage />} />
-        <Route path="/ucamper/:id/:nombre" element={<UcamperPage />} />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/help" element={<HelpPage />} />
+          <Route path="/ucamper/:id/:nombre" element={<UcamperPage />} />
 
-        <Route path="/alumnos" element={<AlumnosPage />} />
-        <Route path="/alumno/:id_alumno" element={<AlumnoPage />} />
+          <Route path="/alumnos" element={<AlumnosPage />} />
+          <Route path="/alumno/:id_alumno" element={<AlumnoPage />} />
 
-        <Route
-          path="/blog"
-          element={
-            <BlogPage
-              articulos={["Articulo 1", "Articulo 2", "Articulo 3"]}
-              nombre="Jesus"
-            />
-          }
-        />
-
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+          <Route
+            path="/blog"
+            element={
+              <BlogPage
+                articulos={["Articulo 1", "Articulo 2", "Articulo 3"]}
+                nombre="Jesus"
+              />
+            }
+          />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
     </Router>
   );
 };
