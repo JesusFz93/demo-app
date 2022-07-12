@@ -5,7 +5,6 @@ const EstadosPage = () => {
   const [nombre, setNombre] = useState("Daniel");
 
   const aumentarContador = () => {
-    console.log("Esta funcionando");
     // contador = contador + 1; Esto no se debe hacer nunca con las variables de estado
     setContador(contador + 1);
   };
