@@ -12,6 +12,13 @@ const PostsPage = () => {
     setPosts(data);
   };
 
+  const extrarLibros = async () => {
+    const result = await fetch("https://fakerapi.it/api/v1/books");
+    const resultado = await result.json();
+
+    console.log(resultado.data);
+  };
+
   useEffect(() => {
     extraerPosts();
     // const traerPosts = async () => {
@@ -32,6 +39,7 @@ const PostsPage = () => {
       <main>
         <article>
           <button onClick={extraerPosts}>Extraer posts</button>
+          <button onClick={extrarLibros}>Extraer libros</button>
         </article>
         <article>
           <ul>
