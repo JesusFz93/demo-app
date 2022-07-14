@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const PostsPage = () => {
   const [posts, setPosts] = useState([]);
@@ -10,6 +11,18 @@ const PostsPage = () => {
     // console.log(data);
     setPosts(data);
   };
+
+  useEffect(() => {
+    extraerPosts();
+    // const traerPosts = async () => {
+    //   const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+    //   const data = await resp.json();
+
+    //   setPosts(data);
+    // };
+
+    // traerPosts();
+  }, []);
 
   return (
     <>
@@ -25,8 +38,12 @@ const PostsPage = () => {
             {posts.map((post) => {
               return (
                 <li key={post.id}>
-                  <h2>{post.title}</h2>
+                  <h2>{post.id}</h2>
+                  <h3>{post.title}</h3>
                   <p>{post.body}</p>
+                  <NavLink to={`/post/${post.id}`} className="btn btn-success">
+                    Navegar al post
+                  </NavLink>
                 </li>
               );
             })}
