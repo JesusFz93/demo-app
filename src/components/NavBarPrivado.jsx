@@ -136,7 +136,7 @@ const NavBarPrivado = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Home Page
+                Home
               </NavLink>
             </li>
             <li className="nav-item">
@@ -147,7 +147,7 @@ const NavBarPrivado = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                About Page
+                About
               </NavLink>
             </li>
 
@@ -159,7 +159,7 @@ const NavBarPrivado = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Contact Page
+                Contact
               </NavLink>
             </li>
 
@@ -171,7 +171,7 @@ const NavBarPrivado = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Help Page
+                Help
               </NavLink>
             </li>
 
@@ -183,7 +183,7 @@ const NavBarPrivado = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Blog Page
+                Blog
               </NavLink>
             </li>
 
@@ -218,7 +218,7 @@ const NavBarPrivado = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Alumnos Page
+                Alumnos
               </NavLink>
             </li>
 
@@ -254,6 +254,17 @@ const NavBarPrivado = () => {
                 }
               >
                 Libros
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/peliculas"
+                aria-current="page"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Peliculas
               </NavLink>
             </li>
             <li>
