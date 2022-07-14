@@ -20,34 +20,36 @@ const Privadas = () => {
   return (
     <>
       <NavBarPrivado />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/help" element={<HelpPage />} />
-        <Route path="/ucamper/:id/:nombre" element={<UcamperPage />} />
+      <div className="container mt-5">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/help" element={<HelpPage />} />
+          <Route path="/ucamper/:id/:nombre" element={<UcamperPage />} />
 
-        <Route path="/alumnos" element={<AlumnosPage />} />
-        <Route path="/alumno/:id_alumno" element={<AlumnoPage />} />
+          <Route path="/alumnos" element={<AlumnosPage />} />
+          <Route path="/alumno/:id_alumno" element={<AlumnoPage />} />
 
-        <Route
-          path="/blog"
-          element={
-            <BlogPage
-              articulos={["Articulo 1", "Articulo 2", "Articulo 3"]}
-              nombre="Jesus"
-            />
-          }
-        />
+          <Route
+            path="/blog"
+            element={
+              <BlogPage
+                articulos={["Articulo 1", "Articulo 2", "Articulo 3"]}
+                nombre="Jesus"
+              />
+            }
+          />
 
-        <Route path="/estados" element={<EstadosPage />} />
-        <Route path="/efectos" element={<EfectosPage />} />
-        <Route path="/books" element={<BooksPage />} />
-        <Route path="/posts" element={<PostsPage />} />
-        <Route path="/post/:idPost" element={<PostPage />} />
+          <Route path="/estados" element={<EstadosPage />} />
+          <Route path="/efectos" element={<EfectosPage />} />
+          <Route path="/books" element={<BooksPage />} />
+          <Route path="/posts" element={<PostsPage />} />
+          <Route path="/post/:idPost" element={<PostPage />} />
 
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
     </>
   );
 };
