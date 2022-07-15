@@ -12,7 +12,8 @@ import EfectosPage from "../pages/EfectosPage";
 import EstadosPage from "../pages/EstadosPage";
 import HelpPage from "../pages/HelpPage";
 import HomePage from "../pages/HomePage";
-import PeliculasPages from "../pages/PeliculasPages";
+import PeliculaPage from "../pages/PeliculaPage";
+import PeliculasPage from "../pages/PeliculasPage";
 import PostPage from "../pages/PostPage";
 import PostsPage from "../pages/PostsPage";
 import UcamperPage from "../pages/UcamperPage";
@@ -47,7 +48,8 @@ const Privadas = () => {
           <Route path="/books" element={<BooksPage />} />
           <Route path="/posts" element={<PostsPage />} />
           <Route path="/post/:idPost" element={<PostPage />} />
-          <Route path="/peliculas" element={<PeliculasPages />} />
+          <Route path="/peliculas" element={<PeliculasPage />} />
+          <Route path="/pelicula/:idPelicula" element={<PeliculaPage />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

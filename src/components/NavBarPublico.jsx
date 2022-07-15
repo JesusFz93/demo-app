@@ -89,7 +89,7 @@ const NavBarPublico = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Home Page
+                Home
               </NavLink>
             </li>
             <li className="nav-item">
@@ -100,7 +100,7 @@ const NavBarPublico = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                About Page
+                About
               </NavLink>
             </li>
 
@@ -112,7 +112,7 @@ const NavBarPublico = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Contact Page
+                Contact
               </NavLink>
             </li>
 
@@ -124,7 +124,7 @@ const NavBarPublico = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Help Page
+                Help
               </NavLink>
             </li>
 
@@ -148,6 +148,17 @@ const NavBarPublico = () => {
                 }
               >
                 Login
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/register-user"
+                aria-current="page"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Register
               </NavLink>
             </li>
 

@@ -195,7 +195,7 @@ const NavBarPrivado = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                Ucamper Page
+                Ucamper
               </NavLink>
             </li>
             <li className="nav-item">
