@@ -7,6 +7,7 @@ import HelpPage from "../pages/HelpPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import RegisterUserPage from "../pages/RegisterUserPage";
+import TestPage from "../pages/TestPage";
 
 const Publicas = () => {
   return (
@@ -20,6 +21,7 @@ const Publicas = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register-user" element={<RegisterUserPage />} />
+          <Route path="/test" element={<TestPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>

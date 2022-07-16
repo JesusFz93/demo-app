@@ -152,6 +152,17 @@ const NavBarPublico = () => {
             </li>
             <li>
               <NavLink
+                to="/test"
+                aria-current="page"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Test
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/register-user"
                 aria-current="page"
                 className={({ isActive }) =>
