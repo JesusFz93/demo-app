@@ -21,8 +21,9 @@
 
 // export default LoginPage;
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { AuthContext } from "../auth/AuthContext";
 
 const initialFormState = {
   userName: "",
@@ -30,6 +31,7 @@ const initialFormState = {
 };
 
 const LoginPage = () => {
+  const { login } = useContext(AuthContext);
   const [form, setForm] = useState(initialFormState);
   const [user, setUser] = useState([]);
   const userNameRef = useRef();
@@ -92,6 +94,9 @@ const LoginPage = () => {
                 onClick={loginUser}
               >
                 Iniciar Sesion
+              </button>
+              <button className="btn btn-success" onClick={login}>
+                Login
               </button>
             </div>
           </form>
