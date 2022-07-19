@@ -19,6 +19,7 @@ import EstadosPage from "../pages/EstadosPage";
 import PostsPage from "../pages/PostsPage";
 import EffectosPage from "../pages/EffectosPage";
 import PostPage from "../pages/PostPage";
+import PeliculasPage from "../pages/PeliculasPage";
 
 const AppRouter = () => {
   return (
@@ -50,6 +51,8 @@ const AppRouter = () => {
           <Route path="/post/:idPost" element={<PostPage />} />
 
           <Route path="/efectos" element={<EffectosPage />} />
+
+          <Route path="/peliculas" element={<PeliculasPage />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
