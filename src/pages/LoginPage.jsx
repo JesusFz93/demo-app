@@ -38,6 +38,7 @@ const LoginPage = () => {
 
   const loginUser = async () => {
     try {
+      console.log(process.env.REACT_APP_API_KEY)
       const auth = getAuth();
       const { userName, password } = form;
       const resp = await signInWithEmailAndPassword(auth, userName, password);
