@@ -17,6 +17,10 @@ const LoginPage = () => {
     }
   };
 
+  const variablesEntorno = () => {
+    console.log(process.env.REACT_APP_NOMBRE_VARIABLE);
+  };
+
   return (
     <>
       <header>
@@ -26,6 +30,14 @@ const LoginPage = () => {
         <article>
           <button type="button" className="btn btn-success" onClick={login}>
             Iniciar sesion
+          </button>
+
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={variablesEntorno}
+          >
+            Variables de entorno
           </button>
         </article>
       </main>
