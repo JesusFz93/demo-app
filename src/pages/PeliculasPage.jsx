@@ -8,6 +8,7 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
+import { NavLink } from "react-router-dom";
 
 const initialForm = {
   nombre: "",
@@ -130,6 +131,7 @@ const PeliculasPage = () => {
                 <th scope="col">Nombre</th>
                 <th scope="col">Descripcion</th>
                 <th scope="col">Precio</th>
+                <th scope="col">Informacion</th>
                 <th scope="col">Actualizar</th>
                 <th scope="col">Eliminar</th>
               </tr>
@@ -142,6 +144,14 @@ const PeliculasPage = () => {
                     <td>{obj.nombre}</td>
                     <td>{obj.descripcion}</td>
                     <td>{obj.precio}</td>
+                    <td>
+                      <NavLink
+                        to={`/pelicula/${obj.id}`}
+                        className="btn btn-info"
+                      >
+                        Ver mas...
+                      </NavLink>
+                    </td>
                     <td>
                       <button
                         type="button"
