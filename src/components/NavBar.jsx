@@ -152,6 +152,30 @@ const NavBar = () => {
               </NavLink>
             </li>
 
+            <li className="nav-item">
+              <NavLink
+                to="/registrar-usuario"
+                aria-current="page"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Registrar
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                to="/login"
+                aria-current="page"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Login
+              </NavLink>
+            </li>
+
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"

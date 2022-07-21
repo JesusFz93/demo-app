@@ -21,6 +21,8 @@ import EffectosPage from "../pages/EffectosPage";
 import PostPage from "../pages/PostPage";
 import PeliculasPage from "../pages/PeliculasPage";
 import PeliculaPage from "../pages/PeliculaPage";
+import RegistrarUsuario from "../pages/RegistrarUsuario";
+import LoginPage from "../pages/LoginPage";
 
 const AppRouter = () => {
   return (
@@ -55,6 +57,9 @@ const AppRouter = () => {
 
           <Route path="/peliculas" element={<PeliculasPage />} />
           <Route path="/pelicula/:idPelicula" element={<PeliculaPage />} />
+
+          <Route path="/registrar-usuario" element={<RegistrarUsuario />} />
+          <Route path="/login" element={<LoginPage />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
