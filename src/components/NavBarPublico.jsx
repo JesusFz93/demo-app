@@ -172,6 +172,17 @@ const NavBarPublico = () => {
                 Register
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/animals"
+                aria-current="page"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Animales
+              </NavLink>
+            </li>
 
             <li className="nav-item dropdown">
               <a

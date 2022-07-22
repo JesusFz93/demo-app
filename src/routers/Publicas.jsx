@@ -2,6 +2,8 @@ import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NavBarPrivado from "../components/NavBarPublico";
 import AboutPage from "../pages/AboutPage";
+import AnimalsPage from "../pages/AnimalsPage";
+import AnimalPage from "../pages/AnimalPage";
 import ContactPage from "../pages/ContactPage";
 import HelpPage from "../pages/HelpPage";
 import HomePage from "../pages/HomePage";
@@ -22,6 +24,8 @@ const Publicas = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register-user" element={<RegisterUserPage />} />
           <Route path="/test" element={<TestPage />} />
+          <Route path="/animals" element={<AnimalsPage />} />
+          <Route path="/animal/:idAnimal" element={<AnimalPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
