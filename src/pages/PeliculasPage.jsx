@@ -33,12 +33,13 @@ const PeliculasPage = () => {
   // };
 
   const getDocsData = async () => {
-    const resp = await getDocs(collection(db, "peliculas"));
+    const resp = await getDocs(collection(db, "usuarios"));
     const data = resp.docs.map((item) => ({
       id: item.id,
       ...item.data(),
     }));
 
+    console.log(data);
     setPeliculas(data);
     setForm(initialFormState);
     nombreRef.current.focus();
