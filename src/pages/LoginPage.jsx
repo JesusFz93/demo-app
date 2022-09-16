@@ -22,7 +22,12 @@
 // export default LoginPage;
 
 import React, { useState, useRef, useEffect, useContext } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import { AuthContext } from "../auth/AuthContext";
 
 const initialFormState = {
@@ -38,7 +43,6 @@ const LoginPage = () => {
 
   const loginUser = async () => {
     try {
-      console.log(process.env.REACT_APP_API_KEY)
       const auth = getAuth();
       const { userName, password } = form;
       const resp = await signInWithEmailAndPassword(auth, userName, password);
@@ -49,6 +53,33 @@ const LoginPage = () => {
 
       setUser({ errorMessage: errorMessage });
     }
+  };
+
+  const loginGoogle = () => {
+    console.log("entro");
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // ...
+      })
+      .catch((error) => {
+        console.log(error);
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
   };
 
   useEffect(() => {
@@ -96,9 +127,16 @@ const LoginPage = () => {
               >
                 Iniciar Sesion
               </button>
-              <button className="btn btn-success" onClick={login}>
-                Login
+              <button
+                type="button"
+                className="btn btn-info"
+                onClick={loginGoogle}
+              >
+                Google
               </button>
+              {/* <button className="btn btn-success" onClick={login}>
+                Login
+              </button> */}
             </div>
           </form>
         </article>
